@@ -1,13 +1,13 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Focus;
+import com.kuangclub.domain.InfoApplication;
 import org.apache.ibatis.jdbc.SQL;
 
-public class FocusSqlProvider {
+public class InfoApplicationSqlProvider {
 
-    public String insertSelective(Focus record) {
+    public String insertSelective(InfoApplication record) {
         SQL sql = new SQL();
-        sql.INSERT_INTO("focus");
+        sql.INSERT_INTO("info_application");
         
         if (record.getTitle() != null) {
             sql.VALUES("title", "#{title,jdbcType=VARCHAR}");

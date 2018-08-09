@@ -1,6 +1,6 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Popular;
+import com.kuangclub.domain.InfoPopular;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,18 +11,18 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface PopularMapper {
+public interface InfoPopularMapper {
     @Insert({
-        "insert into popular (title, content, ",
+        "insert into info_popular (title, content, ",
         "img, url)",
         "values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, ",
         "#{img,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})"
     })
-    int insert(Popular record);
+    int insert(InfoPopular record);
 
-    @InsertProvider(type=PopularSqlProvider.class, method="insertSelective")
-    int insertSelective(Popular record);
+    @InsertProvider(type=InfoPopularSqlProvider.class, method="insertSelective")
+    int insertSelective(InfoPopular record);
 
-    @Select("SELECT * FROM popular")
-    List<Popular> getPopularList();
+    @Select("SELECT * FROM info_popular")
+    List<InfoPopular> getInfoPopularList();
 }

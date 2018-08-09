@@ -1,13 +1,13 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Info;
+import com.kuangclub.domain.InfoType;
 import org.apache.ibatis.jdbc.SQL;
 
-public class InfoSqlProvider {
+public class InfoTypeSqlProvider {
 
-    public String insertSelective(Info record) {
+    public String insertSelective(InfoType record) {
         SQL sql = new SQL();
-        sql.INSERT_INTO("info");
+        sql.INSERT_INTO("info_type");
         
         if (record.getCode() != null) {
             sql.VALUES("code", "#{code,jdbcType=INTEGER}");

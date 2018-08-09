@@ -46,33 +46,33 @@
         <!-- 配置表信息 -->
         <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
             是否生成 example类 -->
-        <table schema="kuangclub" tableName="info"
-               domainObjectName="Info" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_type"
+               domainObjectName="InfoType" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="headline"
-               domainObjectName="Headline" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_headline"
+               domainObjectName="InfoHeadline" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="application"
-               domainObjectName="Application" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_application"
+               domainObjectName="InfoApplication" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="focus"
-               domainObjectName="Focus" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_focus"
+               domainObjectName="InfoFocus" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="policy"
-               domainObjectName="Policy" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_policy"
+               domainObjectName="InfoPolicy" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="popular"
-               domainObjectName="Popular" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_popular"
+               domainObjectName="InfoPopular" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>

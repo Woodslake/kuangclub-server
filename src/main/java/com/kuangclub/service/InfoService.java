@@ -15,45 +15,62 @@ public class InfoService {
     private static final Logger LOGGER = LoggerFactory.getLogger(InfoService.class);
 
     @Autowired
-    private InfoMapper infoMapper;
+    private InfoTypeMapper infoTypeMapper;
 
     @Autowired
-    private HeadlineMapper headlineMapper;
+    private InfoHeadlineMapper infoHeadlineMapper;
 
     @Autowired
-    private ApplicationMapper applicationMapper;
+    private InfoApplicationMapper infoApplicationMapper;
 
     @Autowired
-    private FocusMapper focusMapper;
+    private InfoFocusMapper infoFocusMapper;
 
     @Autowired
-    private PolicyMapper policyMapper;
+    private InfoPolicyMapper infoPolicyMapper;
 
     @Autowired
-    private PopularMapper popularMapper;
+    private InfoPopularMapper infoPopularMapper;
 
-    public List<Info> getInfoList(){
-        return infoMapper.getInfoList();
+    public List<InfoType> getInfoTypeList(){
+        return infoTypeMapper.getInfoTypeList();
     }
 
-    public List<Headline> getHeadlineList(){
-        return headlineMapper.getHeadlineList();
+    public Object getInfoList(String type, int page){
+        switch (type){
+            case "headline":
+                return getInfoHeadlineList(page);
+            case "application":
+                return getInfoApplicationList(page);
+            case "focus":
+                return getInfoFocusList(page);
+            case "policy":
+                return getInfoPolicyList(page);
+            case "popular":
+                return getInfoPopularList(page);
+            default:
+                return null;
+        }
     }
 
-    public List<Application> getApplicationList(){
-        return applicationMapper.getApplicationList();
+    private List<InfoHeadline> getInfoHeadlineList(int page){
+        return infoHeadlineMapper.getInfoHeadlineList();
     }
 
-    public List<Focus> getFocusList(){
-        return focusMapper.getFocusList();
+    private List<InfoApplication> getInfoApplicationList(int page){
+        return infoApplicationMapper.getInfoApplicationList();
     }
 
-    public List<Policy> getPolicyList(){
-        return policyMapper.getPolicyList();
+    private List<InfoFocus> getInfoFocusList(int page){
+        return infoFocusMapper.getInfoFocusList();
     }
 
-    public List<Popular> getPopularList(){
-        return popularMapper.getPopularList();
+    private List<InfoPolicy> getInfoPolicyList(int page){
+        return infoPolicyMapper.getInfoPolicyList();
+    }
+
+    private List<InfoPopular> getInfoPopularList(int page){
+        return infoPopularMapper.getInfoPopularList();
     }
 
 }

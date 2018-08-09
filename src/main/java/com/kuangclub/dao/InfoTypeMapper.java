@@ -1,6 +1,6 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Info;
+import com.kuangclub.domain.InfoType;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
@@ -8,24 +8,23 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface InfoMapper {
+public interface InfoTypeMapper {
     @Insert({
-        "insert into info (code, type, ",
+        "insert into info_type (code, type, ",
         "title)",
         "values (#{code,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, ",
         "#{title,jdbcType=VARCHAR})"
     })
-    int insert(Info record);
+    int insert(InfoType record);
 
-    @InsertProvider(type=InfoSqlProvider.class, method="insertSelective")
-    int insertSelective(Info record);
+    @InsertProvider(type=InfoTypeSqlProvider.class, method="insertSelective")
+    int insertSelective(InfoType record);
 
-    @Select("SELECT * FROM info")
+    @Select("SELECT * FROM info_type")
     @Results({
             @Result(property = "code",  column = "code"),
             @Result(property = "type", column = "type"),
             @Result(property = "title", column = "title"),
     })
-    List<Info> getInfoList();
-
+    List<InfoType> getInfoTypeList();
 }

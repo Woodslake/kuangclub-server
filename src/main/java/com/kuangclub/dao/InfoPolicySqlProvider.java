@@ -1,13 +1,13 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Headline;
+import com.kuangclub.domain.InfoPolicy;
 import org.apache.ibatis.jdbc.SQL;
 
-public class HeadlineSqlProvider {
+public class InfoPolicySqlProvider {
 
-    public String insertSelective(Headline record) {
+    public String insertSelective(InfoPolicy record) {
         SQL sql = new SQL();
-        sql.INSERT_INTO("headline");
+        sql.INSERT_INTO("info_policy");
         
         if (record.getTitle() != null) {
             sql.VALUES("title", "#{title,jdbcType=VARCHAR}");

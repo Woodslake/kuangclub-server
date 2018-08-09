@@ -2,7 +2,7 @@ package com.kuangclub.domain;
 
 import java.io.Serializable;
 
-public class Application implements Serializable {
+public class InfoHeadline implements Serializable {
     private String title;
 
     private String content;

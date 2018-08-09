@@ -1,6 +1,6 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Application;
+import com.kuangclub.domain.InfoFocus;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,18 +11,18 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface ApplicationMapper {
+public interface InfoFocusMapper {
     @Insert({
-        "insert into application (title, content, ",
+        "insert into info_focus (title, content, ",
         "img, url)",
         "values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, ",
         "#{img,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})"
     })
-    int insert(Application record);
+    int insert(InfoFocus record);
 
-    @InsertProvider(type=ApplicationSqlProvider.class, method="insertSelective")
-    int insertSelective(Application record);
+    @InsertProvider(type=InfoFocusSqlProvider.class, method="insertSelective")
+    int insertSelective(InfoFocus record);
 
-    @Select("SELECT * FROM application")
-    List<Application> getApplicationList();
+    @Select("SELECT * FROM info_focus")
+    List<InfoFocus> getInfoFocusList();
 }

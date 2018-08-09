@@ -2,7 +2,7 @@ package com.kuangclub.domain;
 
 import java.io.Serializable;
 
-public class Focus implements Serializable {
+public class InfoPopular implements Serializable {
     private String title;
 
     private String content;

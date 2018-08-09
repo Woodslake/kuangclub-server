@@ -2,7 +2,7 @@ package com.kuangclub.domain;
 
 import java.io.Serializable;
 
-public class Info implements Serializable {
+public class InfoType implements Serializable {
     private Integer code;
 
     private String type;

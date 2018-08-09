@@ -2,7 +2,7 @@ package com.kuangclub.domain;
 
 import java.io.Serializable;
 
-public class Popular implements Serializable {
+public class InfoPolicy implements Serializable {
     private String title;
 
     private String content;

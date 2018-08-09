@@ -1,6 +1,6 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Focus;
+import com.kuangclub.domain.InfoPolicy;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,18 +11,18 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface FocusMapper {
+public interface InfoPolicyMapper {
     @Insert({
-        "insert into focus (title, content, ",
+        "insert into info_policy (title, content, ",
         "img, url)",
         "values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, ",
         "#{img,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})"
     })
-    int insert(Focus record);
+    int insert(InfoPolicy record);
 
-    @InsertProvider(type=FocusSqlProvider.class, method="insertSelective")
-    int insertSelective(Focus record);
+    @InsertProvider(type=InfoPolicySqlProvider.class, method="insertSelective")
+    int insertSelective(InfoPolicy record);
 
-    @Select("SELECT * FROM focus")
-    List<Focus> getFocusList();
+    @Select("SELECT * FROM info_policy")
+    List<InfoPolicy> getInfoPolicyList();
 }

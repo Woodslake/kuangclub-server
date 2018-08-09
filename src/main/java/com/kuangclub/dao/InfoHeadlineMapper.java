@@ -1,6 +1,6 @@
 package com.kuangclub.dao;
 
-import com.kuangclub.domain.Policy;
+import com.kuangclub.domain.InfoHeadline;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,18 +11,18 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface PolicyMapper {
+public interface InfoHeadlineMapper {
     @Insert({
-        "insert into policy (title, content, ",
+        "insert into info_headline (title, content, ",
         "img, url)",
         "values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, ",
         "#{img,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})"
     })
-    int insert(Policy record);
+    int insert(InfoHeadline record);
 
-    @InsertProvider(type=PolicySqlProvider.class, method="insertSelective")
-    int insertSelective(Policy record);
+    @InsertProvider(type=InfoHeadlineSqlProvider.class, method="insertSelective")
+    int insertSelective(InfoHeadline record);
 
-    @Select("SELECT * FROM policy")
-    List<Policy> getPolicyList();
+    @Select("SELECT * FROM info_headline")
+    List<InfoHeadline> getInfoHeadlineList();
 }
