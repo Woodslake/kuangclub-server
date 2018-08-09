@@ -3,19 +3,19 @@ package com.kuangclub.domain;
 import java.io.Serializable;
 
 public class Info implements Serializable {
-    private Byte code;
+    private Integer code;
 
     private String type;
 
-    private String name;
+    private String title;
 
     private static final long serialVersionUID = 1L;
 
-    public Byte getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(Byte code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 
@@ -27,11 +27,11 @@ public class Info implements Serializable {
         this.type = type == null ? null : type.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 }

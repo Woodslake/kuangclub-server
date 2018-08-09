@@ -10,15 +10,15 @@ public class InfoSqlProvider {
         sql.INSERT_INTO("info");
         
         if (record.getCode() != null) {
-            sql.VALUES("code", "#{code,jdbcType=TINYINT}");
+            sql.VALUES("code", "#{code,jdbcType=INTEGER}");
         }
         
         if (record.getType() != null) {
             sql.VALUES("type", "#{type,jdbcType=VARCHAR}");
         }
         
-        if (record.getName() != null) {
-            sql.VALUES("name", "#{name,jdbcType=VARCHAR}");
+        if (record.getTitle() != null) {
+            sql.VALUES("title", "#{title,jdbcType=VARCHAR}");
         }
         
         return sql.toString();
