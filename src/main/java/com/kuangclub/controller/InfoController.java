@@ -17,4 +17,30 @@ public class InfoController {
     public ResultBody getInfoList(){
         return new ResultBody(infoService.getInfoList());
     }
+
+    @RequestMapping("/getHeadlineList")
+    public ResultBody getHeadlineList(){
+        return new ResultBody(infoService.getHeadlineList());
+    }
+
+    @RequestMapping("/getApplicationList")
+    public ResultBody getApplicationList(){
+        return new ResultBody(infoService.getApplicationList());
+    }
+
+    @RequestMapping("/getFocusList")
+    public ResultBody getFocusList(){
+        return new ResultBody(infoService.getFocusList());
+    }
+
+    @RequestMapping("/getPolicyList")
+    public ResultBody getPolicyList(){
+        return new ResultBody(infoService.getPolicyList());
+    }
+
+    @RequestMapping("/getPopularList")
+    public ResultBody getPopularList(){
+        return new ResultBody(infoService.getPopularList());
+    }
+
 }

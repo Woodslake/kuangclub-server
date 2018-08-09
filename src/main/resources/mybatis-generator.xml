@@ -51,6 +51,31 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
+        <table schema="kuangclub" tableName="headline"
+               domainObjectName="Headline" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="kuangclub" tableName="application"
+               domainObjectName="Application" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="kuangclub" tableName="focus"
+               domainObjectName="Focus" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="kuangclub" tableName="policy"
+               domainObjectName="Policy" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="kuangclub" tableName="popular"
+               domainObjectName="Popular" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
 
     </context>
 </generatorConfiguration>
