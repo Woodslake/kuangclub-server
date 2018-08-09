@@ -1,12 +1,10 @@
 package com.kuangclub.controller;
 
-import com.kuangclub.domain.Info;
+import com.kuangclub.result.ResultBody;
 import com.kuangclub.service.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 public class InfoController {
@@ -15,7 +13,7 @@ public class InfoController {
     private InfoService infoService;
 
     @RequestMapping("/getInfoList")
-    public List<Info> getInfoList(){
-        return infoService.getInfoList();
+    public ResultBody getInfoList(){
+        return new ResultBody(infoService.getInfoList());
     }
 }
