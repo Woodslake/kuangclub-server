@@ -15,7 +15,7 @@ public class InfoService {
     private static final Logger LOGGER = LoggerFactory.getLogger(InfoService.class);
 
     @Autowired
-    private InfoTypeMapper infoTypeMapper;
+    private InfoMapper infoMapper;
 
     @Autowired
     private InfoHeadlineMapper infoHeadlineMapper;
@@ -32,8 +32,8 @@ public class InfoService {
     @Autowired
     private InfoPopularMapper infoPopularMapper;
 
-    public List<InfoType> getInfoTypeList(){
-        return infoTypeMapper.getInfoTypeList();
+    public List<Info> getInfoTypeList(){
+        return infoMapper.getInfoTypeList();
     }
 
     public Object getInfoList(String type, int page){

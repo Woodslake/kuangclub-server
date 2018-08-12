@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.kuangclub.dao.InfoTypeMapper">
-  <resultMap id="BaseResultMap" type="com.kuangclub.domain.InfoType">
+<mapper namespace="com.kuangclub.dao.InfoMapper">
+  <resultMap id="BaseResultMap" type="com.kuangclub.domain.Info">
     <result column="code" jdbcType="INTEGER" property="code" />
     <result column="type" jdbcType="VARCHAR" property="type" />
     <result column="title" jdbcType="VARCHAR" property="title" />
   </resultMap>
-  <insert id="insert" parameterType="com.kuangclub.domain.InfoType">
-    insert into info_type (code, type, title
+  <insert id="insert" parameterType="com.kuangclub.domain.Info">
+    insert into info (code, type, title
       )
     values (#{code,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.kuangclub.domain.InfoType">
-    insert into info_type
+  <insert id="insertSelective" parameterType="com.kuangclub.domain.Info">
+    insert into info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="code != null">
         code,
@@ -38,6 +38,6 @@
     </trim>
   </insert>
   <select id="getInfoTypeList" resultMap="BaseResultMap">
-    select * from info_type
+    select * from info
   </select>
 </mapper>

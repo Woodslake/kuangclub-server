@@ -46,36 +46,36 @@
         <!-- 配置表信息 -->
         <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
             是否生成 example类 -->
-        <table schema="kuangclub" tableName="info_type"
-               domainObjectName="InfoType" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info"
+               domainObjectName="Info" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="info_headline"
-               domainObjectName="InfoHeadline" enableCountByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-        </table>
-        <table schema="kuangclub" tableName="info_recommend"
-               domainObjectName="InfoRecommend" enableCountByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-        </table>
-        <table schema="kuangclub" tableName="info_focus"
-               domainObjectName="InfoFocus" enableCountByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-        </table>
-        <table schema="kuangclub" tableName="info_policy"
-               domainObjectName="InfoPolicy" enableCountByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-        </table>
-        <table schema="kuangclub" tableName="info_popular"
-               domainObjectName="InfoPopular" enableCountByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-        </table>
+        <!--<table schema="kuangclub" tableName="info_headline"-->
+               <!--domainObjectName="InfoHeadline" enableCountByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+        <!--</table>-->
+        <!--<table schema="kuangclub" tableName="info_recommend"-->
+               <!--domainObjectName="InfoRecommend" enableCountByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+        <!--</table>-->
+        <!--<table schema="kuangclub" tableName="info_focus"-->
+               <!--domainObjectName="InfoFocus" enableCountByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+        <!--</table>-->
+        <!--<table schema="kuangclub" tableName="info_policy"-->
+               <!--domainObjectName="InfoPolicy" enableCountByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+        <!--</table>-->
+        <!--<table schema="kuangclub" tableName="info_popular"-->
+               <!--domainObjectName="InfoPopular" enableCountByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+        <!--</table>-->
 
     </context>
 </generatorConfiguration>
