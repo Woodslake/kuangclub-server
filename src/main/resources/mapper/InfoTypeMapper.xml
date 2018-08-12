@@ -109,4 +109,6 @@
       </if>
     </trim>
   </insert>
+    select * from info_type
+  </select>
 </mapper>
