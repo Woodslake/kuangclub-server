@@ -21,7 +21,7 @@ public class InfoService {
     private InfoHeadlineMapper infoHeadlineMapper;
 
     @Autowired
-    private InfoApplicationMapper infoApplicationMapper;
+    private InfoRecommendMapper infoRecommendMapper;
 
     @Autowired
     private InfoFocusMapper infoFocusMapper;
@@ -41,7 +41,7 @@ public class InfoService {
             case "headline":
                 return getInfoHeadlineList(page);
             case "recommend":
-                return getInfoApplicationList(page);
+                return getInfoRecommendList(page);
             case "focus":
                 return getInfoFocusList(page);
             case "policy":
@@ -57,8 +57,8 @@ public class InfoService {
         return infoHeadlineMapper.getInfoHeadlineList();
     }
 
-    private List<InfoApplication> getInfoApplicationList(int page){
-        return infoApplicationMapper.getInfoApplicationList();
+    private List<InfoRecommend> getInfoRecommendList(int page){
+        return infoRecommendMapper.getInfoRecommendList();
     }
 
     private List<InfoFocus> getInfoFocusList(int page){

@@ -30,15 +30,15 @@
         </javaModelGenerator>
 
         <!--&lt;!&ndash;生成映射文件存放位置&ndash;&gt;-->
-        <!--&lt;!&ndash;同样Mac用户：targetProject 为全路径&ndash;&gt;-->
-        <!--<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">-->
-            <!--&lt;!&ndash; enableSubPackages:是否让schema作为包的后缀 &ndash;&gt;-->
-            <!--<property name="enableSubPackages" value="false"/>-->
-        <!--</sqlMapGenerator>-->
+        <!--同样Mac用户：targetProject 为全路径-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
 
         <!--生成Dao类存放位置,mapper接口生成的位置-->
         <!--同样Mac用户：targetProject 为全路径-->
-        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.kuangclub.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.kuangclub.dao" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
@@ -56,8 +56,8 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
-        <table schema="kuangclub" tableName="info_application"
-               domainObjectName="InfoApplication" enableCountByExample="false"
+        <table schema="kuangclub" tableName="info_recommend"
+               domainObjectName="InfoRecommend" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
         </table>
