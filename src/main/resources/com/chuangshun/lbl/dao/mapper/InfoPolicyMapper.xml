@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuangclub.dao.InfoPolicyMapper">
+  <resultMap id="BaseResultMap" type="com.kuangclub.domain.InfoPolicy">
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+  </resultMap>
+  <insert id="insert" parameterType="com.kuangclub.domain.InfoPolicy">
+    insert into info_policy (title, content, img, 
+      url)
+    values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuangclub.domain.InfoPolicy">
+    insert into info_policy
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        title,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="img != null">
+        img,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null">
+        #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
