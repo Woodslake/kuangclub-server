@@ -40,7 +40,7 @@ public class InfoService {
         switch (type){
             case "headline":
                 return getInfoHeadlineList(page);
-            case "application":
+            case "recommend":
                 return getInfoApplicationList(page);
             case "focus":
                 return getInfoFocusList(page);
