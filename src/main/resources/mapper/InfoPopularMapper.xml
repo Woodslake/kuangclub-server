@@ -44,4 +44,7 @@
       </if>
     </trim>
   </insert>
+  <select id="getInfoPopularList" resultMap="BaseResultMap">
+    select * from info_popular
+  </select>
 </mapper>

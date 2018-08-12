@@ -44,4 +44,7 @@
       </if>
     </trim>
   </insert>
+  <select id="getInfoPolicyList" resultMap="BaseResultMap">
+    select * from info_policy
+  </select>
 </mapper>

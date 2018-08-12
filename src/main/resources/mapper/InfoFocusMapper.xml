@@ -44,4 +44,7 @@
       </if>
     </trim>
   </insert>
+  <select id="getInfoFocusList" resultMap="BaseResultMap">
+    select * from info_focus
+  </select>
 </mapper>

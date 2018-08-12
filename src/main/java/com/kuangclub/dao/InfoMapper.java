@@ -13,5 +13,5 @@ public interface InfoMapper {
 
     int insertSelective(Info record);
 
-    List<Info> getInfoTypeList();
+    List<Info> getInfoList();
 }

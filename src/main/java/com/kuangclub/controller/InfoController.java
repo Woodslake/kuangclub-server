@@ -13,14 +13,13 @@ public class InfoController {
     @Autowired
     private InfoService infoService;
 
-    @RequestMapping("/getInfoTypeList")
-    public ResultBody getInfoTypeList(){
-        return new ResultBody(infoService.getInfoTypeList());
-    }
-
     @RequestMapping("/getInfoList")
-    public ResultBody getInfoList(String type, int page){
-        return new ResultBody(infoService.getInfoList(type, page));
+    public ResultBody getInfoList(){
+        return new ResultBody(infoService.getInfoList());
     }
 
+    @RequestMapping("/getInfoTypeList")
+    public ResultBody getInfoList(String type, int page){
+        return new ResultBody(infoService.getInfoTypeList(type, page));
+    }
 }

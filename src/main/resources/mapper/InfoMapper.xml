@@ -37,7 +37,7 @@
       </if>
     </trim>
   </insert>
-  <select id="getInfoTypeList" resultMap="BaseResultMap">
+  <select id="getInfoList" resultMap="BaseResultMap">
     select * from info
   </select>
 </mapper>

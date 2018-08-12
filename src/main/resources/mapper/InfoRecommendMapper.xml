@@ -44,4 +44,7 @@
       </if>
     </trim>
   </insert>
+  <select id="getInfoRecommendList" resultMap="BaseResultMap">
+    select * from info_recommend
+  </select>
 </mapper>

@@ -32,11 +32,11 @@ public class InfoService {
     @Autowired
     private InfoPopularMapper infoPopularMapper;
 
-    public List<Info> getInfoTypeList(){
-        return infoMapper.getInfoTypeList();
+    public List<Info> getInfoList(){
+        return infoMapper.getInfoList();
     }
 
-    public Object getInfoList(String type, int page){
+    public Object getInfoTypeList(String type, int page){
         switch (type){
             case "headline":
                 return getInfoHeadlineList(page);
