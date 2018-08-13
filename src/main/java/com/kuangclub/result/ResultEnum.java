@@ -3,9 +3,10 @@ package com.kuangclub.result;
 public enum ResultEnum {
 
     SUCCESS(200, "success"),
-    EXCEPTION(-1, "system error"),
-    NOT_AUTH(-5, "not auth"),
-    NOT_FOUND(-7, "service not found"),
+    SYSTEM_ERROR(-1, "system error"),
+    UNKNOWN_ERROR(-1000, "unknown error"),
+    NOT_AUTH(-1001, "not auth"),
+    NOT_FOUND(-1002, "service not found"),
 //    PARAM_NULL,
 //    PARAM_ERROR,
     ;

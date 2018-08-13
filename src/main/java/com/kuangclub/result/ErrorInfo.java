@@ -5,7 +5,7 @@ public class ErrorInfo {
     private String message;
 
     public ErrorInfo() {
-        this(ResultEnum.EXCEPTION);
+        this(ResultEnum.UNKNOWN_ERROR);
     }
 
     public ErrorInfo(ResultEnum resultEnum){
