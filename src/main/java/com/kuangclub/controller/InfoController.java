@@ -3,8 +3,9 @@ package com.kuangclub.controller;
 import com.kuangclub.result.ResultBody;
 import com.kuangclub.service.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,13 +15,13 @@ public class InfoController {
     @Autowired
     private InfoService infoService;
 
-    @RequestMapping(value = "/getInfoList", method = RequestMethod.GET)
+    @GetMapping(value = "/getInfoList")
     public ResultBody getInfoList(){
         return new ResultBody(infoService.getInfoList());
     }
 
-    @RequestMapping(value = "/getInfoTypeList", method = RequestMethod.GET)
-    public ResultBody getInfoList(String type, int page){
+    @GetMapping(value = "/getInfoTypeList")
+    public ResultBody getInfoList(String type, @RequestParam(defaultValue = "0") int page){
         return new ResultBody(infoService.getInfoTypeList(type, page));
     }
 }

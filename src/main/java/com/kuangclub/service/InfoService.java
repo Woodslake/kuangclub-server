@@ -1,5 +1,7 @@
 package com.kuangclub.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.kuangclub.dao.*;
 import com.kuangclub.domain.*;
 import org.slf4j.Logger;
@@ -7,12 +9,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class InfoService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InfoService.class);
+
+    private final int PAGE_SIZE = 5;
 
     @Autowired
     private InfoMapper infoMapper;
@@ -53,23 +58,30 @@ public class InfoService {
         }
     }
 
-    private List<InfoHeadline> getInfoHeadlineList(int page){
-        return infoHeadlineMapper.getInfoHeadlineList();
+    private PageInfo<InfoHeadline> getInfoHeadlineList(int page){
+        PageHelper.startPage(page, PAGE_SIZE);
+        List<InfoHeadline> infoHeadlineList = infoHeadlineMapper.getInfoHeadlineList();
+        PageInfo<InfoHeadline> pageInfo = new PageInfo<>(infoHeadlineList);
+        return pageInfo;
     }
 
     private List<InfoRecommend> getInfoRecommendList(int page){
+        PageHelper.startPage(page, PAGE_SIZE);
         return infoRecommendMapper.getInfoRecommendList();
     }
 
     private List<InfoFocus> getInfoFocusList(int page){
+        PageHelper.startPage(page, PAGE_SIZE);
         return infoFocusMapper.getInfoFocusList();
     }
 
     private List<InfoPolicy> getInfoPolicyList(int page){
+        PageHelper.startPage(page, PAGE_SIZE);
         return infoPolicyMapper.getInfoPolicyList();
     }
 
     private List<InfoPopular> getInfoPopularList(int page){
+        PageHelper.startPage(page, PAGE_SIZE);
         return infoPopularMapper.getInfoPopularList();
     }
 
