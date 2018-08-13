@@ -1,18 +1,19 @@
 package com.kuangclub.result;
 
-public class ErrorInfo {
+public enum ResultEnum {
+
+    SUCCESS(200, "success"),
+    EXCEPTION(-1, "system error"),
+    NOT_AUTH(-5, "no auth"),
+    NOT_FOUND(-7, "service not found"),
+//    PARAM_NULL,
+//    PARAM_ERROR,
+    ;
+
     private int code;
     private String message;
 
-    public ErrorInfo() {
-        this(ResultEnum.EXCEPTION);
-    }
-
-    public ErrorInfo(ResultEnum resultEnum){
-        this(resultEnum.getCode(), resultEnum.getMessage());
-    }
-
-    private ErrorInfo(int code, String message) {
+    ResultEnum(int code, String message){
         this.code = code;
         this.message = message;
     }

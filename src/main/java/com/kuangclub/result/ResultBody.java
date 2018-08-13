@@ -8,12 +8,14 @@ public class ResultBody implements Serializable {
     private Object data;
 
     public ResultBody(Object data) {
-        this.code = 200;
-        this.message = "success";
-        this.data = data;
+        this(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMessage(), data);
     }
 
-    public ResultBody(int code, String message, Object data) {
+    public ResultBody(ErrorInfo errorInfo){
+        this(errorInfo.getCode(), errorInfo.getMessage(), null);
+    }
+
+    private ResultBody(int code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;
