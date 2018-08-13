@@ -62,4 +62,6 @@
         <appender-ref ref="INFO" />
         <appender-ref ref="ERROR" />
     </root>
+    <!-- sql -->
+    <logger name="com.kuangclub.dao" level="DEBUG"/>
 </configuration>
