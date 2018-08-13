@@ -25,9 +25,7 @@ public class HttpLogAspect {
         HttpServletRequest request = attributes.getRequest();
 
         //记录请求路径url
-        logger.info(
-                "url={}",request.getRequestURL()
-        );
+        logger.info("url={}",request.getRequestURL());
 
         //记录请求方式method
         logger.info("method={}",request.getMethod());
