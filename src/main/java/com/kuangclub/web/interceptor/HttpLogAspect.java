@@ -1,4 +1,4 @@
-package com.kuangclub.interceptor;
+package com.kuangclub.web.interceptor;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;

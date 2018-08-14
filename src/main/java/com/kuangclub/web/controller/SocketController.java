@@ -1,4 +1,4 @@
-package com.kuangclub.controller;
+package com.kuangclub.web.controller;
 
 import com.kuangclub.service.WebSocketService;
 import org.springframework.beans.factory.annotation.Autowired;

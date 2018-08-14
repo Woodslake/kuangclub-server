@@ -1,4 +1,4 @@
-package com.kuangclub.controller;
+package com.kuangclub.web.controller;
 
 import com.kuangclub.result.Result;
 import com.kuangclub.service.InfoService;
