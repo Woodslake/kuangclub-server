@@ -1,23 +1,25 @@
 package com.kuangclub.result;
 
+import org.springframework.http.HttpStatus;
+
 import java.io.Serializable;
 
-public class ResultBody implements Serializable {
+public class Result implements Serializable {
     private int code;
     private String message;
     private Object data;
 
-    public ResultBody(Object data) {
-        this(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMessage(), data);
+    public Result(Object data) {
+        this(HttpStatus.OK, data);
     }
 
-    public ResultBody(ErrorInfo errorInfo){
-        this(errorInfo.getCode(), errorInfo.getMessage(), null);
+    public Result(HttpStatus httpStatus){
+        this(httpStatus, null);
     }
 
-    private ResultBody(int code, String message, Object data) {
-        this.code = code;
-        this.message = message;
+    public Result(HttpStatus httpStatus, Object data){
+        this.code = httpStatus.value();
+        this.message = httpStatus.getReasonPhrase();
         this.data = data;
     }
 
