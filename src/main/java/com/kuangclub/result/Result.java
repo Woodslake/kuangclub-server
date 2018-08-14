@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import java.io.Serializable;
 
 public class Result implements Serializable {
-    private int code;
+    private int status;
     private String message;
     private Object data;
 
@@ -18,17 +18,17 @@ public class Result implements Serializable {
     }
 
     public Result(HttpStatus httpStatus, Object data){
-        this.code = httpStatus.value();
+        this.status = httpStatus.value();
         this.message = httpStatus.getReasonPhrase();
         this.data = data;
     }
 
-    public int getCode() {
-        return code;
+    public int getStatus() {
+        return status;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public String getMessage() {
